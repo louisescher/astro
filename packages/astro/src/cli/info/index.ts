@@ -75,13 +75,7 @@ export async function getInfoOutput({
 	for (const [label, value] of rows) {
 		output += printRow(label, value, print);
 	}
-
-	if (packageManager === 'bun') {
-		console.warn(
-			'Bun is not officially supported by Astro. Unable to retreive certain version information.',
-		);
-	}
-
+	
 	return output.trim();
 }
 
